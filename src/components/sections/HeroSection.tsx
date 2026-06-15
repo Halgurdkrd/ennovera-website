@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function HeroSection() {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-canvas">
@@ -34,14 +36,15 @@ export default function HeroSection() {
           Explore Our Work →
         </a>
 
-        {/* AI-generated hero visual will go here */}
-        <div
-          className="mt-16 aspect-[16/9] max-w-2xl mx-auto bg-accent-blue/5 border border-border-soft rounded-2xl flex items-center justify-center"
-          aria-label="Hero visual — placeholder for AI-generated image"
-        >
-          <p className="text-text-muted text-sm select-none">
-            Hero visual coming soon
-          </p>
+        <div className="max-w-4xl mx-auto mt-12 px-4">
+          <Image
+            src="/images/hero.jpg"
+            alt="Ennovera AI engineering — networked data flows across a cityscape, illustrated in soft watercolor"
+            width={1456}
+            height={816}
+            priority={true}
+            className="rounded-2xl w-full h-auto"
+          />
         </div>
       </div>
     </section>

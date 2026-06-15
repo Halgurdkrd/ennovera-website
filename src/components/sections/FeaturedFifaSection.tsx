@@ -1,4 +1,4 @@
-import { Trophy } from 'lucide-react'
+import Image from 'next/image'
 import { CONTACT } from '@/lib/contact'
 
 const techTags = ['XGBoost', 'PyTorch', 'FastAPI', 'Next.js']
@@ -62,21 +62,13 @@ export default function FeaturedFifaSection() {
           </div>
 
           {/* Visual column */}
-          {/* AI-generated FIFA visual will go here */}
-          <div
-            className="aspect-[4/5] rounded-2xl border border-border-soft flex items-center justify-center"
-            style={{
-              background:
-                'radial-gradient(circle at center, rgba(59,91,219,0.07) 0%, rgba(139,127,184,0.04) 60%, transparent 100%)',
-            }}
-            aria-label="FIFA project visual — placeholder for AI-generated image"
-          >
-            <Trophy
-              size={64}
-              className="text-accent-blue opacity-40"
-              aria-hidden="true"
-            />
-          </div>
+          <Image
+            src="/images/fifa-pitch.jpg"
+            alt="FIFA World Cup 2026 AI Predictor — abstract football pitch with predicted player positions and tactical network, illustrated in soft watercolor"
+            width={760}
+            height={950}
+            className="rounded-2xl w-full h-auto"
+          />
         </div>
       </div>
     </section>
