@@ -3,7 +3,7 @@ import Footer from '@/components/Footer'
 import HeroSection from '@/components/sections/HeroSection'
 import ProblemSection from '@/components/sections/ProblemSection'
 import PillarsSection from '@/components/sections/PillarsSection'
-import FeaturedFifaSection from '@/components/sections/FeaturedFifaSection'
+import StatsStripSection from '@/components/sections/StatsStripSection'
 import DomainsSection from '@/components/sections/DomainsSection'
 import SelectedWorkSection from '@/components/sections/SelectedWorkSection'
 import ServicesSection from '@/components/sections/ServicesSection'
@@ -18,7 +18,7 @@ export default function Home() {
         <HeroSection />
         <ProblemSection />
         <PillarsSection />
-        <FeaturedFifaSection />
+        <StatsStripSection />
         <DomainsSection />
         <SelectedWorkSection />
         <ServicesSection />

@@ -1,6 +1,7 @@
 import { Mail, MessageCircle } from 'lucide-react'
 import { InstagramIcon, FacebookIcon } from '@/components/ui/SocialIcons'
 import { CONTACT, whatsappUrl } from '@/lib/contact'
+import { FadeInSection } from '@/components/ui/FadeInSection'
 
 const activeClass =
   'flex items-center gap-2 border border-accent-blue/30 text-text-primary rounded-lg px-5 py-3 hover:bg-accent-blue/5 transition-colors font-medium text-sm'
@@ -12,7 +13,7 @@ export default function ContactSection() {
   const waUrl = whatsappUrl()
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-canvas scroll-mt-16">
+    <section id="contact" className="py-16 md:py-20 bg-canvas scroll-mt-16">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <p className="text-xs uppercase tracking-widest text-accent-blue font-medium mb-4">
           // GET IN TOUCH
@@ -25,6 +26,7 @@ export default function ContactSection() {
           typically respond within one business day.
         </p>
 
+        <FadeInSection delay={0.2}>
         <div className="flex flex-wrap justify-center gap-4">
           {CONTACT.email ? (
             <a
@@ -108,6 +110,7 @@ export default function ContactSection() {
             </div>
           )}
         </div>
+        </FadeInSection>
       </div>
     </section>
   )

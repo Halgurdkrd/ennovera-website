@@ -1,4 +1,7 @@
+'use client'
+
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 interface WorkItem {
   title: string
@@ -7,9 +10,26 @@ interface WorkItem {
   tech: string[]
   image: string
   alt: string
+  featured?: boolean
+  liveStat?: string
+  link?: string
+  linkLabel?: string
 }
 
 const works: WorkItem[] = [
+  {
+    title: 'FIFA World Cup 2026 AI Predictor',
+    category: 'Sports · Live',
+    description:
+      'An AI prediction system for the 2026 FIFA World Cup. Combines match outcome prediction, scoreline modeling, momentum analysis, and tournament simulation across the full 48-team bracket.',
+    tech: ['XGBoost', 'PyTorch', 'FastAPI', 'Next.js'],
+    image: '/images/fifa-pitch.jpg',
+    alt: 'FIFA World Cup 2026 AI Predictor — abstract football pitch with predicted player positions and tactical network, illustrated in soft watercolor',
+    featured: true,
+    liveStat: 'Live · 48 teams · 64 matches',
+    link: 'https://aifootballp.com',
+    linkLabel: 'Visit Live App →',
+  },
   {
     title: 'AI Drug Discovery Pipeline',
     category: 'Pharma · NDA',
@@ -57,59 +77,118 @@ const works: WorkItem[] = [
   },
 ]
 
+const tagClass =
+  'text-xs px-2 py-1 border border-border-soft rounded-md text-text-muted bg-canvas'
+
 export default function SelectedWorkSection() {
-  const [first, ...rest] = works
+  const [featured, ...rest] = works
 
   return (
-    <section id="work" className="py-24 md:py-32 bg-canvas scroll-mt-16">
+    <section id="work" className="py-16 md:py-20 bg-canvas scroll-mt-16">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          className="text-center mb-10"
+        >
           <p className="text-xs uppercase tracking-widest text-accent-blue font-medium mb-4">
             // SELECTED WORK
           </p>
-          <h2 className="text-3xl md:text-4xl font-semibold text-text-primary mb-4">
+          <h2 className="text-3xl md:text-4xl font-semibold text-text-primary mb-3">
             Production systems and research showcases.
           </h2>
           <p className="text-text-muted max-w-2xl mx-auto">
             A representative selection of recent AI engineering work.
           </p>
-        </div>
+        </motion.div>
 
-        {/* First card spans wider on large screens */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-card border border-border-soft rounded-2xl p-6 hover:translate-y-[-2px] hover:shadow-md transition-all duration-300 lg:col-span-2 flex flex-col">
-            <Image
-              src={first.image}
-              alt={first.alt}
-              width={1456}
-              height={816}
-              className="w-full h-auto rounded-lg object-cover aspect-[16/9] mb-5"
-            />
-            <span className="inline-block border border-border-soft rounded-full px-3 py-1 text-xs text-text-muted mb-3 w-fit">
-              {first.category}
-            </span>
-            <h3 className="text-xl font-semibold text-text-primary mb-2">
-              {first.title}
-            </h3>
-            <p className="text-sm text-text-muted leading-relaxed flex-1">
-              {first.description}
-            </p>
-            <div className="flex flex-wrap gap-2 mt-4">
-              {first.tech.map((t) => (
-                <span
-                  key={t}
-                  className="text-xs px-2 py-1 border border-border-soft rounded-md text-text-muted bg-canvas"
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
-          </div>
+          {/* ── FIFA featured card ── */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className="md:col-span-2 lg:col-span-2 bg-card border border-border-soft rounded-2xl overflow-hidden group"
+          >
+            <div className="flex flex-col lg:flex-row">
+              {/* Left: image */}
+              <div className="relative h-[260px] lg:h-auto lg:flex-1 overflow-hidden">
+                <Image
+                  src={featured.image}
+                  alt={featured.alt}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                />
+              </div>
 
-          {rest.map((work) => (
-            <div
+              {/* Right: content */}
+              <div className="lg:w-[45%] p-6 md:p-8 flex flex-col">
+                {/* Live stat pill */}
+                <div className="flex items-center gap-2 bg-accent-coral/10 text-accent-coral rounded-full px-3 py-1 w-fit mb-4 text-xs font-medium">
+                  <motion.div
+                    animate={{ opacity: [0.4, 1, 0.4] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                    className="w-2 h-2 rounded-full bg-accent-coral flex-shrink-0"
+                  />
+                  {featured.liveStat}
+                </div>
+
+                <span className="inline-block border border-border-soft rounded-full px-3 py-1 text-xs text-text-muted mb-3 w-fit">
+                  {featured.category}
+                </span>
+
+                <h3 className="text-xl font-semibold text-text-primary mb-2">
+                  {featured.title}
+                </h3>
+                <p className="text-sm text-text-muted leading-relaxed flex-1">
+                  {featured.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {featured.tech.map((t) => (
+                    <span key={t} className={tagClass}>
+                      {t}
+                    </span>
+                  ))}
+                </div>
+
+                {featured.link && (
+                  <div className="mt-6">
+                    <motion.a
+                      href={featured.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-accent-blue text-white rounded-xl px-8 py-4 font-medium text-base"
+                      animate={{
+                        boxShadow: [
+                          '0 4px 15px rgba(59,91,219,0.15)',
+                          '0 4px 20px rgba(59,91,219,0.30)',
+                          '0 4px 15px rgba(59,91,219,0.15)',
+                        ],
+                      }}
+                      transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      {featured.linkLabel}
+                    </motion.a>
+                  </div>
+                )}
+              </div>
+            </div>
+          </motion.div>
+
+          {/* ── Regular work cards ── */}
+          {rest.map((work, i) => (
+            <motion.div
               key={work.title}
-              className="bg-card border border-border-soft rounded-2xl p-6 hover:translate-y-[-2px] hover:shadow-md transition-all duration-300 flex flex-col"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-80px' }}
+              transition={{ duration: 0.6, delay: 0.1 * (i + 1), ease: 'easeOut' }}
+              className="bg-card border border-border-soft rounded-2xl p-6 hover:-translate-y-1 hover:shadow-md transition-all duration-200 flex flex-col"
             >
               <Image
                 src={work.image}
@@ -129,15 +208,12 @@ export default function SelectedWorkSection() {
               </p>
               <div className="flex flex-wrap gap-2 mt-4">
                 {work.tech.map((t) => (
-                  <span
-                    key={t}
-                    className="text-xs px-2 py-1 border border-border-soft rounded-md text-text-muted bg-canvas"
-                  >
+                  <span key={t} className={tagClass}>
                     {t}
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
