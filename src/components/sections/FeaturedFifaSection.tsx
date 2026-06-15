@@ -30,11 +30,11 @@ export default function FeaturedFifaSection() {
               simulation across the full 48-team tournament structure.
             </p>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 mt-4">
               {techTags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs border border-border-soft text-text-muted px-2 py-1 rounded"
+                  className="text-xs px-2 py-1 border border-border-soft rounded-md text-text-muted bg-bg-canvas"
                 >
                   {tag}
                 </span>
@@ -50,14 +50,20 @@ export default function FeaturedFifaSection() {
               >
                 Visit Live App →
               </a>
-              <a
-                href={`https://instagram.com/${CONTACT.instagram}`}
-                className="border border-accent-blue text-accent-blue rounded-lg px-6 py-3 hover:bg-accent-blue/5 transition-colors font-medium text-sm"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Follow on Instagram
-              </a>
+              {CONTACT.instagram ? (
+                <a
+                  href={`https://instagram.com/${CONTACT.instagram}`}
+                  className="border border-accent-blue text-accent-blue rounded-lg px-6 py-3 hover:bg-accent-blue/5 transition-colors font-medium text-sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Follow on Instagram
+                </a>
+              ) : (
+                <span className="border border-border-soft text-text-muted rounded-lg px-6 py-3 font-medium text-sm opacity-50 cursor-not-allowed">
+                  Instagram (Coming Soon)
+                </span>
+              )}
             </div>
           </div>
 
