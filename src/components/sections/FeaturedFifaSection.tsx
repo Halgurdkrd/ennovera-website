@@ -34,7 +34,7 @@ export default function FeaturedFifaSection() {
               {techTags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs px-2 py-1 border border-border-soft rounded-md text-text-muted bg-bg-canvas"
+                  className="text-xs px-2 py-1 border border-border-soft rounded-md text-text-muted bg-canvas"
                 >
                   {tag}
                 </span>

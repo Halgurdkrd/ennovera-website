@@ -98,7 +98,7 @@ export default function SelectedWorkSection() {
               {first.tech.map((t) => (
                 <span
                   key={t}
-                  className="text-xs px-2 py-1 border border-border-soft rounded-md text-text-muted bg-bg-canvas"
+                  className="text-xs px-2 py-1 border border-border-soft rounded-md text-text-muted bg-canvas"
                 >
                   {t}
                 </span>
@@ -131,7 +131,7 @@ export default function SelectedWorkSection() {
                 {work.tech.map((t) => (
                   <span
                     key={t}
-                    className="text-xs px-2 py-1 border border-border-soft rounded-md text-text-muted bg-bg-canvas"
+                    className="text-xs px-2 py-1 border border-border-soft rounded-md text-text-muted bg-canvas"
                   >
                     {t}
                   </span>
