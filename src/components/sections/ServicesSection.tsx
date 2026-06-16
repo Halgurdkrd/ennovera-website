@@ -24,12 +24,12 @@ const services: Service[] = [
   {
     icon: Database,
     title: 'RAG Knowledge Systems',
-    body: 'Retrieval-augmented assistants that turn documents into queryable intelligence.',
+    body: 'Assistants that read your documents and answer questions about them — accurately, with sources.',
   },
   {
     icon: Brain,
     title: 'Machine Learning Models',
-    body: 'CNNs, ANNs, transformers, LoRA fine-tuning, and custom architectures.',
+    body: 'Custom models built for your data — from computer vision to language to time-series prediction.',
   },
   {
     icon: Workflow,
@@ -39,7 +39,7 @@ const services: Service[] = [
   {
     icon: TrendingUp,
     title: 'Predictive Analytics',
-    body: 'Statistical and ML models for forecasting and decision support.',
+    body: 'Forecasting and decision-support models — for sports, business, healthcare, anywhere.',
   },
   {
     icon: MessageSquare,
@@ -58,10 +58,10 @@ export default function ServicesSection() {
               // WHAT WE BUILD
             </p>
             <h2 className="text-3xl md:text-4xl font-semibold text-text-primary mb-3">
-              Engineering capabilities.
+              Six things we do well.
             </h2>
             <p className="text-text-muted max-w-2xl mx-auto">
-              End-to-end AI services from concept to production.
+              From quick AI integrations to full custom builds. We work with teams of any size.
             </p>
           </div>
         </FadeInSection>
@@ -96,7 +96,7 @@ export default function ServicesSection() {
               href="#contact"
               className="inline-block border border-accent-blue text-accent-blue rounded-lg px-6 py-3 hover:bg-accent-blue/5 transition-colors font-medium"
             >
-              Discuss a Project →
+              Start a Conversation →
             </a>
           </div>
         </FadeInSection>

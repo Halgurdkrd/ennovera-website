@@ -12,9 +12,9 @@ interface StatItem {
 
 const stats: StatItem[] = [
   { display: 'PhD', numericTarget: null, suffix: '', label: 'LED ENGINEERING' },
-  { display: '10+', numericTarget: 10, suffix: '+', label: 'PRODUCTION SYSTEMS' },
-  { display: '3', numericTarget: 3, suffix: '', label: 'LANGUAGES SUPPORTED' },
-  { display: 'Global', numericTarget: null, suffix: '', label: 'FROM KURDISTAN' },
+  { display: '10+', numericTarget: 10, suffix: '+', label: 'PRODUCTION SYSTEMS SHIPPED' },
+  { display: 'EN · AR · KU', numericTarget: null, suffix: '', label: 'NATIVE LANGUAGE SUPPORT' },
+  { display: '5+', numericTarget: 5, suffix: '+', label: 'INDUSTRIES SERVED' },
 ]
 
 function Counter({ target, suffix }: { target: number; suffix: string }) {

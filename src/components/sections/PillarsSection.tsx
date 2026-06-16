@@ -17,7 +17,7 @@ const pillars: Pillar[] = [
     title: 'PhD-Led Engineering',
     stat: '5+ Years',
     statColor: '#7C9EE8',
-    body: 'Applied research in machine learning, communication systems, and AI engineering. Every project led by deep technical foundations.',
+    body: 'A decade of academic and industry experience in machine learning, signal processing, and applied AI. Every project led personally — not handed to a junior.',
   },
   {
     icon: Rocket,
@@ -25,7 +25,7 @@ const pillars: Pillar[] = [
     title: 'Production Systems Shipped',
     stat: '10+ Projects',
     statColor: '#6DD3C0',
-    body: 'From research prototype to deployed system. We ship working AI, not slide decks. Measurable outcomes for real clients.',
+    body: "We don't stop at proof of concept. Every system we build runs in production, handles real traffic, and delivers measurable results.",
   },
   {
     icon: Languages,
@@ -33,7 +33,7 @@ const pillars: Pillar[] = [
     title: 'Multi-language AI',
     stat: 'EN · AR · KU',
     statColor: '#FF9D85',
-    body: "Native Kurdish (Sorani) and Arabic NLP capability, alongside English. Regional depth Silicon Valley can't replicate.",
+    body: 'Native Kurdish (Sorani) and Arabic NLP, alongside English. We build AI that understands the languages and contexts of the Middle East.',
   },
 ]
 
@@ -60,11 +60,11 @@ export default function PillarsSection() {
               // WHY ENNOVERA
             </p>
             <h2 className="text-3xl md:text-4xl font-semibold text-white mb-3">
-              Built on rigorous engineering.
+              How we engineer AI.
             </h2>
             <p className="text-[#9BA9C2] max-w-2xl mx-auto">
-              Production-grade AI systems backed by deep research foundations,
-              applied outcomes, and regional expertise.
+              Three foundations shape every project we deliver: technical depth,
+              real-world outcomes, and language coverage few competitors offer.
             </p>
           </div>
         </FadeInSection>

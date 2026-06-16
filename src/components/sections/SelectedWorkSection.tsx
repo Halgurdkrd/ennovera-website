@@ -78,7 +78,7 @@ const works: WorkItem[] = [
 ]
 
 const tagClass =
-  'text-xs px-2 py-1 border border-border-soft rounded-md text-text-muted bg-canvas'
+  'text-xs px-2 py-1 rounded-md border border-[#C8D4E0] text-[#5A6577] bg-[#EEF2F7]'
 
 export default function SelectedWorkSection() {
   const [featured, ...rest] = works
@@ -100,7 +100,7 @@ export default function SelectedWorkSection() {
             Production systems and research showcases.
           </h2>
           <p className="text-text-muted max-w-2xl mx-auto">
-            A representative selection of recent AI engineering work.
+            Recent projects across pharma, sports, healthcare, retail, and botany.
           </p>
         </motion.div>
 

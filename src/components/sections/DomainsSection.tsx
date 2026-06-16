@@ -61,8 +61,8 @@ export default function DomainsSection() {
               Cross-industry AI engineering.
             </h2>
             <p className="text-text-muted max-w-2xl mx-auto text-base md:text-lg">
-              We&apos;ve shipped AI systems across healthcare, pharma, sports,
-              retail, and regional language technology.
+              Six domains where we&apos;ve shipped working AI — from clinical
+              decision support to live sports prediction.
             </p>
           </div>
         </FadeInSection>

@@ -12,9 +12,9 @@ export default function ProblemSection() {
             AI projects stall between research and production.
           </h2>
           <p className="text-lg leading-relaxed text-text-muted max-w-3xl mx-auto">
-            Most organizations experiment with AI. Few deploy systems that ship.
-            The gap between proof-of-concept and production is where most
-            projects die — and where Ennovera does its best work.
+            Most organizations experiment with AI. Few build systems that survive
+            contact with real users, real data, and real constraints. The gap
+            between proof-of-concept and production is where Ennovera lives.
           </p>
         </FadeInSection>
       </div>

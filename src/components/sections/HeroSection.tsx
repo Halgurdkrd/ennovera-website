@@ -49,8 +49,8 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.5, ease: 'easeOut' }}
           className="text-xl md:text-2xl text-text-muted max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          We build production-grade machine learning, AI agents, and
-          automation — from research to deployment.
+          Machine learning, AI agents, and automation — designed, built,
+          and deployed by engineers who ship.
         </motion.p>
 
         <motion.div

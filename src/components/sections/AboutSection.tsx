@@ -27,8 +27,8 @@ export default function AboutSection() {
               Our work spans pharmaceutical research, predictive analytics,
               conversational AI, medical imaging, and automation — with native
               Kurdish and Arabic language capability as a regional strength. We
-              focus on systems that ship: production-ready code, measurable
-              results, and engineering that holds up under real-world conditions.
+              focus on code that runs in production, results you can measure, and
+              engineering you can trust.
             </p>
             <p className="text-lg leading-relaxed text-text-muted">
               Whether you&apos;re a local business, an international team, or a
