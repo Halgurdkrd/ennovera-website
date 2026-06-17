@@ -1,39 +1,30 @@
+'use client'
+
 import { FadeInSection } from '@/components/ui/FadeInSection'
+import { useLocale } from '@/components/LocaleProvider'
 
 export default function AboutSection() {
+  const { t } = useLocale()
+
   return (
     <section id="about" className="py-16 md:py-20 bg-canvas scroll-mt-16">
       <div className="max-w-6xl mx-auto px-6">
         <FadeInSection>
           <div className="text-center mb-10">
             <p className="text-xs uppercase tracking-widest text-accent-blue font-medium mb-4">
-              // ABOUT ENNOVERA
+              {t.about.label}
             </p>
             <h2 className="text-3xl md:text-4xl font-semibold text-text-primary">
-              Engineering AI from Kurdistan.
+              {t.about.title}
             </h2>
           </div>
         </FadeInSection>
 
         <FadeInSection delay={0.2}>
           <div className="max-w-2xl mx-auto border-l-2 border-accent-blue pl-6 space-y-6">
-            <p className="text-lg leading-relaxed text-text-muted">
-              Ennovera is an AI engineering company based in the Kurdistan Region
-              of Iraq. Founded and led by a PhD engineer specializing in
-              communication systems and applied machine learning, we build
-              practical AI systems for clients across industries.
-            </p>
-            <p className="text-lg leading-relaxed text-text-muted">
-              Our work spans pharmaceutical research, predictive analytics,
-              conversational AI, medical imaging, and automation — with native
-              Kurdish and Arabic language capability as a regional strength. We
-              focus on code that runs in production, results you can measure, and
-              engineering you can trust.
-            </p>
-            <p className="text-lg leading-relaxed text-text-muted">
-              Whether you&apos;re a local business, an international team, or a
-              research partner, we work with you from concept to deployment.
-            </p>
+            <p className="text-lg leading-relaxed text-text-muted">{t.about.p1}</p>
+            <p className="text-lg leading-relaxed text-text-muted">{t.about.p2}</p>
+            <p className="text-lg leading-relaxed text-text-muted">{t.about.p3}</p>
           </div>
         </FadeInSection>
       </div>

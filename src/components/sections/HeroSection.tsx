@@ -3,8 +3,11 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
+import { useLocale } from '@/components/LocaleProvider'
 
 export default function HeroSection() {
+  const { t } = useLocale()
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-canvas">
       {/* Top gradient overlay */}
@@ -29,7 +32,7 @@ export default function HeroSection() {
           transition={{ duration: 0.5, delay: 0, ease: 'easeOut' }}
           className="text-xs uppercase tracking-widest text-accent-blue font-medium mb-5"
         >
-          // AI ENGINEERING STUDIO
+          {t.hero.label}
         </motion.p>
 
         <motion.h1
@@ -38,9 +41,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
           className="text-5xl md:text-7xl font-semibold tracking-tight text-text-primary mb-6 leading-tight"
         >
-          Practical AI systems for
-          <br className="hidden md:block" />
-          real-world problems.
+          {t.hero.title}
         </motion.h1>
 
         <motion.p
@@ -49,8 +50,7 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.5, ease: 'easeOut' }}
           className="text-xl md:text-2xl text-text-muted max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Machine learning, AI agents, and automation — designed, built,
-          and deployed by engineers who ship.
+          {t.hero.subtitle}
         </motion.p>
 
         <motion.div
@@ -62,7 +62,7 @@ export default function HeroSection() {
             href="#work"
             className="inline-block bg-accent-blue text-white rounded-lg px-6 py-3 hover:opacity-90 transition-opacity font-medium"
           >
-            Explore Our Work →
+            {t.hero.cta}
           </a>
         </motion.div>
 

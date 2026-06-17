@@ -2,20 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
-
-interface StatItem {
-  display: string
-  numericTarget: number | null
-  suffix: string
-  label: string
-}
-
-const stats: StatItem[] = [
-  { display: 'PhD', numericTarget: null, suffix: '', label: 'LED ENGINEERING' },
-  { display: '10+', numericTarget: 10, suffix: '+', label: 'PRODUCTION SYSTEMS SHIPPED' },
-  { display: 'EN · AR · KU', numericTarget: null, suffix: '', label: 'NATIVE LANGUAGE SUPPORT' },
-  { display: '5+', numericTarget: 5, suffix: '+', label: 'INDUSTRIES SERVED' },
-]
+import { useLocale } from '@/components/LocaleProvider'
 
 function Counter({ target, suffix }: { target: number; suffix: string }) {
   const ref = useRef<HTMLSpanElement>(null)
@@ -49,12 +36,14 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
 }
 
 export default function StatsStripSection() {
+  const { t } = useLocale()
+
   return (
     <section className="bg-canvas py-16 md:py-20">
       <div className="max-w-6xl mx-auto px-6">
         <hr className="border-border-soft mb-12" />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-          {stats.map((stat, i) => (
+          {t.stats.items.map((stat, i) => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
@@ -69,9 +58,7 @@ export default function StatsStripSection() {
                   stat.display
                 )}
               </div>
-              <p className="text-sm uppercase tracking-widest text-text-muted">
-                {stat.label}
-              </p>
+              <p className="text-sm uppercase tracking-widest text-text-muted">{stat.label}</p>
             </motion.div>
           ))}
         </div>

@@ -1,17 +1,19 @@
+'use client'
+
 import { Mail, MessageCircle } from 'lucide-react'
 import { InstagramIcon, FacebookIcon } from '@/components/ui/SocialIcons'
 import { CONTACT, whatsappUrl } from '@/lib/contact'
+import { useLocale } from '@/components/LocaleProvider'
 
 export default function Footer() {
   const waUrl = whatsappUrl()
+  const { t } = useLocale()
 
   return (
     <footer className="border-t border-border-soft py-12">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
-          <p className="text-sm text-text-muted">
-            © 2026 Ennovera. All rights reserved.
-          </p>
+          <p className="text-sm text-text-muted">{t.footer.copyright}</p>
 
           <div className="flex items-center justify-center gap-5">
             {CONTACT.email ? (
@@ -77,9 +79,7 @@ export default function Footer() {
             )}
           </div>
 
-          <p className="text-sm text-text-muted md:text-right">
-            Kurdistan Region, Iraq
-          </p>
+          <p className="text-sm text-text-muted md:text-right">{t.footer.location}</p>
         </div>
       </div>
     </footer>

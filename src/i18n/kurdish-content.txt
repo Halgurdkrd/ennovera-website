@@ -1,0 +1,269 @@
+=== ENNOVERA — KURDISH SORANI CONTENT (FINAL) ===
+
+# Navigation
+nav.domains = بوارەکان
+nav.work = کارەکان
+nav.services = خزمەتگوزارییەکان
+nav.about = دەربارە
+nav.contact = پەیوەندی
+
+# Footer
+footer.copyright = © 2026 Ennovera. گشت مافەکانی پارێزراوە.
+footer.location = سلێمانی، کوردستان
+
+# Hero
+hero.label = // AI ENGINEERING STUDIO
+hero.title = سیستمی پراکتیکی AI بۆ کێشەکانی جیهانی ڕاستەقینە.
+hero.subtitle = Machine learning، بریکارەکانی AI، و ئۆتۆماتیکردن — دیزاینکراو، بونیادنراو، و جێبەجێکراو لەلایەن ئەو ئەندازیارانەی پڕۆژە دەگەیەننە قۆناغی کۆتایی.
+hero.cta = کارەکانمان بپشکنە →
+
+# Problem Section
+problem.label = // THE PROBLEM
+problem.title = پڕۆژەکانی AI لە نێوان توێژینەوە و بەرهەمهێناندا پەکیان دەکەوێت.
+problem.body = زۆربەی ڕێکخراوەکان تاقیکردنەوە لەگەڵ AI دەکەن. کەمترینیان سیستمێک بونیاد دەنێن کە بتوانێت لەگەڵ بەکارهێنەری ڕاستەقینە، داتای ڕاستەقینە، و بەربەستە ڕاستەقینەکاندا بەردەوام بێت. ئەو بۆشاییەی لە نێوان سەلماندنی بیرۆکە و قۆناغی بەرهەمهێناندایە، ئەو شوێنەیە کە Ennovera کاری تێدا دەکات.
+
+# Pillars Section (dark navy)
+pillars.label = // WHY ENNOVERA
+pillars.title = چۆن ئەندازیاری بۆ AI دەکەین.
+pillars.subtitle = سێ بنەما شێوازی کارکردنی هەر پڕۆژەیەک دیاری دەکەن کە پێشکەشی دەکەین: قووڵیی تەکنیکی، ئەنجامی ڕاستەقینە، و پشتگیریی زمانەوانی بە شێوازێک کە کەم ڕکابەر دەتوانن پێشکەشی بکەن.
+
+pillars.1.title = ئەندازیاریی بەڕێوەبراو لەلایەن هەڵگرانی PhD
+pillars.1.stat = 5+ Years
+pillars.1.body = دە ساڵ ئەزموونی ئەکادیمی و پیشەسازی لە machine learning، پرۆسێسکردنی سیگناڵ، و applied AI. هەر پڕۆژەیەک بە شێوەی شەخسی سەرپەرشتی دەکرێت — نەک بدرێتە دەست ئەندازیارێکی سەرەتایی.
+
+pillars.2.title = گەیاندنی سیستمەکانی قۆناغی بەرهەمهێنان
+pillars.2.stat = 10+ Projects
+pillars.2.body = ئێمە لە قۆناغی سەلماندنی بیرۆکەدا ناوەستین. هەر سیستمێک بونیادی دەنێین لە قۆناغی بەرهەمهێناندا کار دەکات، بەرگەی ترافیکی ڕاستەقینە دەگرێت، و ئەنجامی بەرجەستە پێشکەش دەکات.
+
+pillars.3.title = Multi-language AI
+pillars.3.stat = EN · AR · KU
+pillars.3.body = سیستمی ڕەسەنی کوردی (سۆرانی) و عەرەبی بۆ NLP، لە پاڵ زمانی ئینگلیزیدا. ئێمە AIیەک بونیاد دەنێین کە لە زمان و چوارچێوەی ڕۆژهەڵاتی ناوەڕاست تێبگات.
+
+# Stat Strip (4 numbers)
+stats.1.value = PhD
+stats.1.label = ئەندازیاریی بەڕێوەبراو
+
+stats.2.value = 10+
+stats.2.label = سیستەمی جێبەجێکراو
+
+stats.3.value = EN · AR · KU
+stats.3.label = پشتگیریی زمانە ڕەسەنەکان
+
+stats.4.value = 5+
+stats.4.label = بوارەکانی پێشکەشکراو
+
+# Domains Section
+domains.label = // DOMAINS OF EXPERTISE
+domains.title = ئەندازیاریی AI بۆ کەرتە جیاوازەکان.
+domains.subtitle = شەش بوار کە تێیاندا AIی کارامەمان گەیاندووەتە قۆناغی کۆتایی — لە پشتگیریی بڕیاردانی پزیشکییەوە تا پێشبینیکردنی ڕاستەوخۆی وەرزشی.
+
+domains.1.title = Healthcare & Medical AI
+domains.1.body = شیکردنەوەی وێنەی دەستنیشانکردنی نەخۆشی، کلینیکاڵ NLP، سیستمی پشتگیریی بڕیاردان.
+
+domains.2.title = Pharmaceutical R&D
+domains.2.body = پایپلاینەکانی دۆزینەوەی دەرمان، شیکردنەوەی پێکهاتەکان، دروستکردنی گەردیلەیی.
+
+domains.3.title = Botanical & Agricultural AI
+domains.3.body = دیاریکردنی جۆری ڕووەک، شیکردنەوەی پێکهاتەی گژوگیا، agri-vision.
+
+domains.4.title = Sports & Predictive Analytics
+domains.4.body = پێشبینیکردنی یاری، مۆدێلکردنی مۆمێنتۆم، هاوشێوەسازیی پاڵەوانێتی.
+
+domains.5.title = Retail & Conversational AI
+domains.5.body = چاتبۆتی فرە-کەناڵ، ئۆتۆماتیکردنی خزمەتگوزاریی کڕیاران، بریکارە دەنگییەکان.
+
+domains.6.title = Regional Language AI
+domains.6.body = سیستمی کوردی (سۆرانی) و عەرەبی بۆ NLP، ASR، و وەرگێڕان.
+
+# Selected Work Section
+work.label = // SELECTED WORK
+work.title = سیستمەکانی قۆناغی بەرهەمهێنان و پڕۆژە توێژینەوەییەکان.
+work.subtitle = پڕۆژەکانی ئەم دواییانە لە بوارەکانی دەرمانسازی، وەرزش، تەندروستی، فرۆشتنی تاکەکەس، و ڕووەکناسیدا.
+
+work.fifa.title = FIFA World Cup 2026 AI Predictor
+work.fifa.category = Sports · Live
+work.fifa.live = Live · 48 teams · 64 matches
+work.fifa.body = سیستمێکی پێشبینیکردنی AI بۆ FIFA World Cup 2026. پێشبینیکردنی ئەنجامی یارییەکان، مۆدێلکردنی گۆڵەکان، شیکردنەوەی مۆمێنتۆم، و هاوشێوەسازیی پاڵەوانێتییەکە بۆ تەواوی خشتەی 48 teams کۆ دەکاتەوە.
+work.fifa.cta = سەردانی ئەپی ڕاستەوخۆ بکە →
+
+work.drug.title = AI Drug Discovery Pipeline
+work.drug.category = Pharma · NDA
+work.drug.body = پایپلاینی AI بۆ دۆزینەوەی دەرمانی شێرپەنجەی پەنکریاس، کە گەڕان لە ناو وێژەی زانستی، دروستکردنی گەردیلەیی، پێشبینیکردنی هێزی بەستنەوە، و فلتەرکردنی ADMET کۆ دەکاتەوە.
+
+work.pharma.title = Pharmaceutical Formulation AI
+work.pharma.category = Pharma · Research
+work.pharma.body = سیستمێکی machine learning بۆ شیکردنەوەی دەق و سەرچاوەکانی پێکهاتەی دەرمانسازی، کە بڵاوکراوە زانستییەکان دەگۆڕێت بۆ داتای ڕاهێنانی ڕێکخراو بۆ مۆدێلە پێشبینیکەرەکان.
+
+work.herboscan.title = HerboScan AI
+work.herboscan.category = Botanical · Showcase
+work.herboscan.body = پلاتفۆرمی زیرەکیی ڕووەک بۆ ناسینەوەی 2,400+ جۆری جیاواز بە وردیی 94% و کاتی لێکدانەوەی 1.2s. لەسەر بنەمای CNN ensemble + بنکەی زانیاریی RAG بونیادنراوە.
+
+work.neuraldx.title = NeuralDx
+work.neuraldx.category = Medical · Showcase
+work.neuraldx.body = سیستمێکی دەستنیشانکردنی قووڵ (deep learning) بۆ شیکردنەوەی وێنەکانی تیشک (X-ray)، MRI، و CT scan بە بەکارهێنانی ئەندازیاریی ensemble و دەرئەنجامەکانی XAI.
+
+work.retail.title = Retail Conversational AI
+work.retail.category = Retail · Deployed
+work.retail.body = ئۆتۆماتیکردنی نامەکانی Instagram DM بۆ وەڵامدانەوەی پرسیار و داواکاریی کڕیاران بە چەندین زمان (کوردی/عەرەبی/ئینگلیزی) بۆ کۆمپانیایەکی فرۆشتنی ئامێرە ئەلیکترۆنییەکان لە کوردستان.
+
+work.viewCaseStudy = → بینینی لێکۆڵینەوەی حاڵەت
+work.comingSoon = پەڕەی زانیاریی ورد بەم زووانە دادەنرێت
+
+# Services Section
+services.label = // WHAT WE BUILD
+services.title = حەوت شت کە بە باشی ئەنجامی دەدەین.
+services.subtitle = لە تێکەڵکردنی خێرای AIەوە تا بونیادنانی تەواوی سیستمی تایبەت. ئێمە لەگەڵ تیمەکان بە هەر قەبارەیەک بن کار دەکەین.
+
+services.1.badge = LIVE
+services.1.title = News Intelligence Agent
+services.1.body = بریکارێکی ڕاستەوخۆی AI کە چاودێریی ئینتەرنێت دەکات بۆ هەر بابەتێک کە خۆت هەڵیدەبژێریت — و دەینێرێت بۆ سۆشیاڵ میدیا، WhatsApp، یان Telegram.
+services.1.tagline = پۆستکردنی خۆکارانە · پوختەی ڕۆژانە · بابەتی تایبەتکراو
+
+services.2.title = Custom AI Agents
+services.2.body = سیستمی فرە-بریکار (multi-agent) و ڕەوتی کاری سەربەخۆ کە دەوروبەر هەست پێ دەکەن، شی دەکەنەوە، و کار دەکەن.
+
+services.3.title = RAG Knowledge Systems
+services.3.body = یارمەتیدەرەکان کە بەڵگەنامەکانت دەخوێننەوە و وەڵامی پرسیارەکانی پەیوەست بەوان دەدەنەوە — بە وردی و لەگەڵ ئاماژەدان بە سەرچاوەکان.
+
+services.4.title = Machine Learning Models
+services.4.body = مۆدێلی تایبەت کە بۆ داتاکانی تۆ بونیاد نراون — لە computer visionەوە تا زمان و پێشبینیکردنی زنجیرە-کاتییەکان (time-series).
+
+services.5.title = Automation Workflows
+services.5.body = n8n و پایپلاینی تایبەت کە ئامرازەکانت، APIیەکان، و مۆدێلەکانی AI پێکەوە دەبەستنەوە.
+
+services.6.title = Predictive Analytics
+services.6.body = مۆدێلەکانی پێشبینیکردن و پشتگیریی بڕیاردان — بۆ وەرزش، بازرگانی، تەندروستی، و هەر بوارێکی تر.
+
+services.7.title = AI Chatbots
+services.7.body = بۆ Instagram، WhatsApp، وێب، و دەنگ — چاتی فرەزمانی AI بۆ گفتوگۆ.
+
+services.cta = دەستپێکردنی گفتوگۆ →
+
+# About Section
+about.label = // ABOUT ENNOVERA
+about.title = ئەندازیاریی AI لە کوردستانەوە.
+about.p1 = کۆمپانیای Ennovera کۆمپانیایەکی ئەندازیاریی AIیە و بنکەکەی لە هەرێمی کوردستانی عێراقە. لەلایەن ئەندازیارێکی خاوەن بڕوانامەی PhD دامەزراوە و بەڕێوە دەبرێت کە پسپۆڕە لە سیستمی پەیوەندییەکان و applied machine learning، ئێمە سیستمەکانی پراکتیکی AI بۆ کڕیاران لە کەرتە جیاوازەکاندا بونیاد دەنێین.
+about.p2 = کارەکانمان توێژینەوەی دەرمانسازی، شیکردنەوەی پێشبینیکەر، conversational AI، وێنەگریی پزیشکی، و ئۆتۆماتیکردن دەگرێتەوە — لەگەڵ توانای ڕەسەنی زمانی کوردی و عەرەبی وەک هێزێکی ناوچەیی. ئێمە سەرنج دەخەینە سەر کۆدێک کە لە قۆناغی بەرهەمهێناندا کار بکات، ئەنجامگەلێک کە بتوانیت بیپێویت، و ئەندازیارییەک کە بتوانیت متمانەی پێ بکەیت.
+about.p3 = جا ئەگەر بازرگانییەکی ناوخۆیی بیت، تیمێکی نێودەوڵەتی، یان هاوبەشێکی توێژینەوە، ئێمە لە قۆناغی بیرۆکەوە تا جێبەجێکردن لەگەڵتدا کار دەکەین.
+
+# Contact Section
+contact.label = // GET IN TOUCH
+contact.title = پێمان بڵێ چیت پێویستە.
+contact.subtitle = کێشەیەکی ڕوونت لە مێشکدایە؟ یان تەنها بیرۆکەیەک کە دەتەوێت بپشکنیت؟ دامەزرێنەر و سەرپەرشتیاری ئەندازیاریمان بە شەخسی نامەکەت دەخوێنێتەوە، پێشنیازی چارەسەر دەکات، و پێتان دەڵێت چی پێویستە بۆ بونیادنانی — بەزۆری لە ماوەی یەک ڕۆژی کارکردندا.
+contact.bookCall = پەیوەندییەک لە ڕێگەی WhatsAppەوە دیاری بکە
+contact.role = دامەزرێنەر و سەرپەرشتیاری ئەندازیاری · سلێمانی، کوردستان
+contact.orReachDirectly = یان ڕاستەوخۆ پەیوەندیمان پێوە بکە
+contact.email = ئیمەیڵ
+contact.whatsapp = WhatsApp
+contact.instagram = Instagram
+contact.facebook = Facebook
+contact.comingSoon = بەم زووانە دێت
+
+# WhatsApp pre-filled message (Kurdish version)
+contact.whatsappMessage = سڵاو Ennovera — دەمەوێت دەربارەی پڕۆژەیەک بدوێم. دەتوانین کاتێک بۆ پەیوەندییەک دیاری بکەین؟
+
+# Detail Page Shared Labels
+detail.label = // CASE STUDY
+detail.backToWork = ← گەڕانەوە بۆ کارەکان
+detail.overview = پوختە
+detail.results = ئەنجامەکان
+detail.howItWorks = چۆنیەتی کارکردن
+detail.builtWith = بونیادنراوە بە
+detail.whoThisHelps = بۆ کێ بەسوودە
+detail.discussProject = گفتوگۆ لەسەر پڕۆژەکەت بکە →
+
+# HerboScan Detail Page
+herboscan.title = HerboScan AI
+herboscan.subtitle = پلاتفۆرمێکی زیرەکیی ڕووەک بە هێزی AI بۆ توێژینەوەی ڕووەکناسی، پسپۆڕانی کشتوکاڵ، و پزیشکانی دەرمانی سروشتی (گژوگیا).
+herboscan.category = Botanical · Showcase
+
+herboscan.overview.p1 = سیستمی HerboScan AI پلاتفۆرمێکی زیرەکیی ڕووەکە کە بۆ ناسینەوە، پۆلێنکردن، و شیکردنەوەی زیاتر لە 2,400 جۆری ڕووەک بە وردییەکی بەرز بونیادنراوە. بۆ توێژەرانی ڕووەکناسی، پسپۆڕانی کشتوکاڵ، و پزیشکانی دەرمانی سروشتیی نەریتی دیزاین کراوە، سیستمەکە computer vision لەگەڵ بنکەیەکی زانیاریی ڕێکخراو کۆ دەکاتەوە بۆ ئەوەی دیاریکردنی ڕووەک خێرا، ورد، و بەسوود بکات.
+
+herboscan.overview.p2 = لە ناوەکەکەیدا، کۆمەڵە مۆدێلێکی convolutional neural network (ensemble) هەیە کە لەسەر داتاسێتێکی گەورە و دەستنیشانکراوی وێنەی گەڵا، گوڵ، و تەواوی ڕووەکەکە ڕاهێنراوە. پۆلێنکردنی بینراو بەستراوەتەوە بە چینێکی Retrieval-Augmented Generation (RAG) کە زانیاریی وردی ڕووەکناسی نیشان دەدات — بەکارهێنانە نەریتییەکان، پێکهاتە چالاکەکان، بارودۆخی گەشەکردن — بۆ هەر جۆرێکی دیاریکراو.
+
+herboscan.overview.p3 = ئەنجامەکە: وێنەیەک باربکە، لە ماوەی 1.2 secondsدا ناسینەوەکە بەدەست بهێنە، لەگەڵ زانیاریی ڕێکخراو دەربارەی ئەو جۆرەی کە دۆزیوتەتەوە. بۆ جێبەجێکردنی دەرەوەی هێڵ (offline) گونجێنراوە بۆ ئەوەی لە هەلومەرجی کێڵگەکاندا کار بکات، نەک تەنها لە تاقیگەدا.
+
+# HerboScan Stats
+herboscan.stats.1.value = 2,400+
+herboscan.stats.1.label = جۆرەکانی ڕووەک
+
+herboscan.stats.2.value = 94%
+herboscan.stats.2.label = وردیی پۆلێنکردن
+
+herboscan.stats.3.value = 1.2s
+herboscan.stats.3.label = خێرایی پێوانەیی
+
+herboscan.stats.4.value = Offline
+herboscan.stats.4.label = توانای جێبەجێکردن
+
+# HerboScan Steps
+herboscan.step.1.title = گرتنی وێنە
+herboscan.step.1.body = بەکارهێنەر وێنەیەکی گەڵا، گوڵ، یان تەواوی ڕووەکەکە بار دەکات — لە هەر شوێنێک بێت، بە هێڵەوە بێت یان دەرەوەی هێڵ.
+
+herboscan.step.2.title = پۆلێنکردنی بینراو
+herboscan.step.2.body = کۆمەڵە مۆدێلێکی CNN جۆری ڕووەکەکە دیاری دەکات، و نمرەی پێدەدات لە بەرانبەر زیاتر لە 2,400+ هاوپۆلی ڕاهێنراو بە متمانەیەکی پێوانەکراو.
+
+herboscan.step.3.title = دۆزینەوەی زانیاری
+herboscan.step.3.body = سیستمێکی RAG زانیاریی ڕێکخراوی ڕووەکناسی دەربارەی جۆرەکە نیشان دەدات — بەکارهێنانە نەریتییەکان، پێکهاتە چالاکەکان، ژینگە.
+
+# HerboScan Use Cases
+herboscan.useCase.1.title = توێژەرانی ڕووەکناسی
+herboscan.useCase.1.body = خێراکردنی کارەکانی کێڵگە. دیاریکردنی جۆرەکان لە شوێنی خۆیدا بەبێ گەڕانەوە بۆ سەرچاوە چاپکراوەکان.
+
+herboscan.useCase.2.title = پزیشکانی دەرمانی نەریتی
+herboscan.useCase.2.body = پێداچوونەوە و پشتڕاستکردنەوەی کەرەستەی ڕووەکی، بەراوردکردنی پێکهاتە چالاکەکان، و دۆکیۆمێنتکردنی ئامادەکارییەکان.
+
+herboscan.useCase.3.title = پشکێنەرانی کشتوکاڵی
+herboscan.useCase.3.body = دیاریکردنی جۆرە داگیرکەرەکان، پۆلێنکردنی جۆرەکانی دەغڵودان، و نیشانەکردنی ڕووەکە نەناسراوەکان بۆ بەدواداچوون.
+
+herboscan.cta = دەتەوێت زیرەکییەکی لەم شێوەیە بۆ بوارەکەت هەبێت؟ لەگەڵمان بدوێ.
+
+# NeuralDx Detail Page
+neuraldx.title = NeuralDx
+neuraldx.subtitle = سیستمێکی دەستنیشانکردنی قووڵ (deep learning) بۆ وێنەگریی پزیشکی — شیکردنەوەی تیشک (X-ray)، MRI، و CT scan بە ئەندازیاریی ensemble و دەرئەنجامە ڕوونکرداوەکان.
+neuraldx.category = Medical · Showcase
+
+neuraldx.overview.p1 = سیستمی NeuralDx سیستمێکی فرە-مۆدێلی (multi-modal) دەستنیشانکردنی وێنەگریی پزیشکییە کە بۆ پشتگیریی پزیشکانی تیشک و کلینیکەکان لە شیکردنەوەی وێنەکانی X-ray، MRI، و CT دیزاین کراوە. لەسەر بنەمای ئەندازیاریی deep learning ensemble بونیادنراوە، ناڕێکییەکان دەدۆزێتەوە، دۆزراوەکان پۆلێن دەکات، و ڕاپۆرتی کلینیکیی ڕێکخراو بەرهەم دەهێنێت — لەگەڵ بوونی توانای ڕوونکردنەوە (explainability) لە ڕۆژی یەکەمەوە.
+
+neuraldx.overview.p2 = هەر پشکنینێک لەلایەن چەندین مۆدێلی پسپۆڕی هاوتەریبەوە شی دەکرێتەوە: دانەیەکیان بۆ دۆزینەوەی ناڕێکی ڕاهێنراوە، دانەیەکیان بۆ پۆلێنکردنی ئەناتۆمی، و دانەیەکیان بۆ دیاریکردنی ئاستی مەترسی. دەرئەنجامەکانیان لە یەک کورتەی دەستنیشانکردنی پێوانەکراودا کۆدەکرێنەوە، لەگەڵ نەخشەی سەرنجدان (attention maps) کە بەڵگە بینراوەکانی پشت هەر دۆزراوەیەک نیشان دەدەن.
+
+neuraldx.overview.p3 = سیستمەکە بۆ ڕەوتی کاری کلینیکی بونیادنراوە: ڕاپۆرتی ستاندارد بەرهەم دەهێنێت کە لەگەڵ سیستمی زانیاریی نەخۆشخانەکاندا دەگونجێت، گومان و نادڵنیایی لە کاتی بوونیدا نیشان دەدات، و هیچ کاتێک نابێتە جێگرەوەی بڕیاری پزیشک — بەڵکو بەهێزی دەکات. Explainable AI تەنها تایبەتمەندییەک نییە؛ بەڵکو خودی ئەندازیاریی سیستمەکەیە.
+
+# NeuralDx Stats
+neuraldx.stats.1.value = 3
+neuraldx.stats.1.label = جۆرەکانی پشکنین
+
+neuraldx.stats.2.value = Multi-model
+neuraldx.stats.2.label = ئەندازیاریی Ensemble
+
+neuraldx.stats.3.value = XAI
+neuraldx.stats.3.label = ڕوونکردنەوە لە دیزاینەکەدا
+
+neuraldx.stats.4.value = DICOM
+neuraldx.stats.4.label = پێوانەی جیهانیی
+
+# NeuralDx Steps
+neuraldx.step.1.title = داخلکردنی پشکنین
+neuraldx.step.1.body = وێنەگریی ستانداردی DICOM لە سەرچاوەکانی X-ray، MRI، و CT scan وەردەگرێت — ڕاستەوخۆ لە PACSی نەخۆشخانەوە یان بە بارکردنی دەستی.
+
+neuraldx.step.2.title = شیکردنەوەی فرە-مۆدێل
+neuraldx.step.2.body = مۆدێلە پسپۆڕە هاوتەریبەکان کاری دۆزینەوەی ناڕێکی، پۆلێنکردنی ئەناتۆمی، و دیاریکردنی ئاستی مەترسی ئەنجام دەدەن.
+
+neuraldx.step.3.title = ڕاپۆرتی ڕوونکرداوە
+neuraldx.step.3.body = کورتەیەکی ڕێکخراوی دەستنیشانکردن پێشکەش دەکات لەگەڵ نەخشەی سەرنجدان (attention maps) کە بەڵگە بینراوەکان بۆ هەر دۆزراوەیەک نیشان دەدات.
+
+# NeuralDx Use Cases
+neuraldx.useCase.1.title = پزیشکانی تیشک
+neuraldx.useCase.1.body = خێراکردنی پێداچوونەوە. گرتنی ئەو دۆزراوانەی پێویستیان بە سەرنجە، لەگەڵ بەڵگەی بینراو بۆ هەر نیشانەیەک.
+
+neuraldx.useCase.2.title = پشتگیریی بڕیاردانی کلینیکی
+neuraldx.useCase.2.body = پێشکەشکردنی ڕای دووەم لە کاتی ڕاستەقینەدا، لەگەڵ نیشاندانی نادڵنیایی پێوانەکراو لە کاتی بوونیدا.
+
+neuraldx.useCase.3.title = ڕەوتی کاری نەخۆشخانە
+neuraldx.useCase.3.body = پەیوەستبوون بە سیستمەکانی PACSی هەبوو لە ڕێگەی DICOM. پێشکەشکردنی ڕاپۆرتی گونجاو لەگەڵ تۆمارە ئەلیکترۆنییەکانی تەندروستیدا.
+
+neuraldx.cta = دەتەوێت AI لە ئاستی کلینیکیدا بۆ ڕەوتی کاری تەندروستیت هەبێت؟ لەگەڵمان بدوێ.
+
+# Language Switcher
+language.english = English
+language.kurdish = کوردی

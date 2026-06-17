@@ -4,42 +4,30 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import type { CSSProperties } from 'react'
+import { useLocale } from '@/components/LocaleProvider'
 
-interface WorkItem {
+type WorkStatus = 'live' | 'detail' | 'coming-soon'
+
+interface WorkMeta {
   slug: string
-  title: string
-  category: string
-  description: string
   tech: string[]
   image: string
   alt: string
-  status: 'live' | 'detail' | 'coming-soon'
+  status: WorkStatus
   externalUrl?: string
-  liveStat?: string
-  linkLabel?: string
 }
 
-const works: WorkItem[] = [
+const worksMeta: WorkMeta[] = [
   {
     slug: 'fifa',
-    title: 'FIFA World Cup 2026 AI Predictor',
-    category: 'Sports · Live',
-    description:
-      'An AI prediction system for the 2026 FIFA World Cup. Combines match outcome prediction, scoreline modeling, momentum analysis, and tournament simulation across the full 48-team bracket.',
     tech: ['XGBoost', 'PyTorch', 'FastAPI', 'Next.js'],
     image: '/images/fifa-pitch.jpg',
     alt: 'FIFA World Cup 2026 AI Predictor — abstract football pitch with predicted player positions and tactical network, illustrated in soft watercolor',
     status: 'live',
     externalUrl: 'https://aifootballp.com',
-    liveStat: 'Live · 48 teams · 64 matches',
-    linkLabel: 'Visit Live App →',
   },
   {
     slug: 'drug-discovery',
-    title: 'AI Drug Discovery Pipeline',
-    category: 'Pharma · NDA',
-    description:
-      'AI pipeline for pancreatic cancer drug discovery, combining literature mining, molecular generation, binding affinity prediction, and ADMET filtering.',
     tech: ['Python', 'BigQuery', 'MPNN'],
     image: '/images/work-drug-discovery.jpg',
     alt: 'Abstract molecular structures and DNA helix in soft watercolor — AI drug discovery pipeline visualization',
@@ -47,10 +35,6 @@ const works: WorkItem[] = [
   },
   {
     slug: 'pharma-formulation',
-    title: 'Pharmaceutical Formulation AI',
-    category: 'Pharma · Research',
-    description:
-      'Machine learning system analyzing pharmaceutical formulation literature, converting scientific publications into structured training data for predictive models.',
     tech: ['PyTorch', 'Flask', 'RAG'],
     image: '/images/work-pharma-formulation.jpg',
     alt: 'Soft watercolor illustration of scientific glassware and chemical analysis — pharmaceutical formulation AI',
@@ -58,10 +42,6 @@ const works: WorkItem[] = [
   },
   {
     slug: 'herboscan',
-    title: 'HerboScan AI',
-    category: 'Botanical · Showcase',
-    description:
-      'Plant intelligence platform identifying 2,400+ species with 94% accuracy and 1.2s inference. Built on CNN ensemble + RAG knowledge base.',
     tech: ['CNN', 'RAG', 'FastAPI'],
     image: '/images/work-herboscan.jpg',
     alt: 'Botanical specimens with magnifying lens in soft watercolor — HerboScan plant identification AI',
@@ -69,10 +49,6 @@ const works: WorkItem[] = [
   },
   {
     slug: 'neuraldx',
-    title: 'NeuralDx',
-    category: 'Medical · Showcase',
-    description:
-      'Deep learning diagnostic system analyzing X-ray, MRI, and CT imaging with ensemble architecture and explainable AI outputs.',
     tech: ['PyTorch', 'Multi-model', 'XAI'],
     image: '/images/work-neuraldx.jpg',
     alt: 'Abstract cross-sectional medical scans with diagnostic regions — NeuralDx medical imaging AI',
@@ -80,10 +56,6 @@ const works: WorkItem[] = [
   },
   {
     slug: 'retail-chatbot',
-    title: 'Retail Conversational AI',
-    category: 'Retail · Deployed',
-    description:
-      'Instagram DM automation handling multilingual (Kurdish/Arabic/English) customer inquiries and orders for a Kurdistan-based electronics retailer.',
     tech: ['Gemini', 'n8n', 'Instagram API'],
     image: '/images/work-chatbot.jpg',
     alt: 'Soft watercolor speech bubbles around a smartphone — retail conversational AI',
@@ -123,6 +95,41 @@ function TechTags({ tech }: { tech: string[] }) {
 }
 
 export default function SelectedWorkSection() {
+  const { t, locale } = useLocale()
+  const detailBase = locale === 'ku' ? '/ku/work' : '/work'
+
+  const workTexts = [
+    {
+      title: t.work.fifa.title,
+      category: t.work.fifa.category,
+      description: t.work.fifa.body,
+      liveStat: t.work.fifa.live,
+      linkLabel: t.work.fifa.cta,
+    },
+    { title: t.work.drug.title, category: t.work.drug.category, description: t.work.drug.body },
+    {
+      title: t.work.pharma.title,
+      category: t.work.pharma.category,
+      description: t.work.pharma.body,
+    },
+    {
+      title: t.work.herboscan.title,
+      category: t.work.herboscan.category,
+      description: t.work.herboscan.body,
+    },
+    {
+      title: t.work.neuraldx.title,
+      category: t.work.neuraldx.category,
+      description: t.work.neuraldx.body,
+    },
+    {
+      title: t.work.retail.title,
+      category: t.work.retail.category,
+      description: t.work.retail.body,
+    },
+  ]
+
+  const works = worksMeta.map((meta, i) => ({ ...meta, ...workTexts[i] }))
   const [featured, ...rest] = works
 
   return (
@@ -136,14 +143,12 @@ export default function SelectedWorkSection() {
           className="text-center mb-10"
         >
           <p className="text-xs uppercase tracking-widest text-accent-blue font-medium mb-4">
-            // SELECTED WORK
+            {t.work.label}
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold text-text-primary mb-3">
-            Production systems and research showcases.
+            {t.work.title}
           </h2>
-          <p className="text-text-muted max-w-2xl mx-auto">
-            Recent projects across pharma, sports, healthcare, retail, and botany.
-          </p>
+          <p className="text-text-muted max-w-2xl mx-auto">{t.work.subtitle}</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -154,9 +159,7 @@ export default function SelectedWorkSection() {
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
             className="md:col-span-2 lg:col-span-2 bg-card border border-border-soft rounded-2xl overflow-hidden group cursor-pointer"
-            onClick={() =>
-              window.open(featured.externalUrl, '_blank', 'noopener,noreferrer')
-            }
+            onClick={() => window.open(featured.externalUrl, '_blank', 'noopener,noreferrer')}
           >
             <div className="flex flex-col lg:flex-row">
               {/* Left: image */}
@@ -185,9 +188,7 @@ export default function SelectedWorkSection() {
                   {featured.category}
                 </span>
 
-                <h3 className="text-xl font-semibold text-text-primary mb-2">
-                  {featured.title}
-                </h3>
+                <h3 className="text-xl font-semibold text-text-primary mb-2">{featured.title}</h3>
                 <p className="text-sm text-text-muted leading-relaxed flex-1">
                   {featured.description}
                 </p>
@@ -235,12 +236,10 @@ export default function SelectedWorkSection() {
                   {work.category}
                 </span>
                 <h3 className="text-xl font-semibold text-text-primary mb-2">{work.title}</h3>
-                <p className="text-sm text-text-muted leading-relaxed flex-1">
-                  {work.description}
-                </p>
+                <p className="text-sm text-text-muted leading-relaxed flex-1">{work.description}</p>
                 <TechTags tech={work.tech} />
                 {work.status === 'detail' && (
-                  <p className="text-xs text-accent-blue mt-3 font-medium">→ View case study</p>
+                  <p className="text-xs text-accent-blue mt-3 font-medium">{t.work.viewCaseStudy}</p>
                 )}
               </>
             )
@@ -257,13 +256,16 @@ export default function SelectedWorkSection() {
                 transition={{ duration: 0.6, delay: 0.1 * (i + 1), ease: 'easeOut' }}
               >
                 {work.status === 'detail' ? (
-                  <Link href={`/work/${work.slug}`} className={`block ${baseClass} cursor-pointer`}>
+                  <Link
+                    href={`${detailBase}/${work.slug}`}
+                    className={`block ${baseClass} cursor-pointer`}
+                  >
                     {inner}
                   </Link>
                 ) : (
                   <div className={`relative ${baseClass}`}>
                     <span className="absolute top-3 right-3 bg-canvas border border-border-soft text-text-muted text-[10px] uppercase tracking-widest rounded-full px-2 py-0.5">
-                      Detail page coming soon
+                      {t.work.comingSoon}
                     </span>
                     {inner}
                   </div>

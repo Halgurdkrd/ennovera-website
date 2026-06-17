@@ -2,26 +2,37 @@
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
+import { useLocale } from '@/components/LocaleProvider'
 
-const links = [
-  { anchor: '#domains', label: 'Domains' },
-  { anchor: '#work', label: 'Work' },
-  { anchor: '#services', label: 'Services' },
-  { anchor: '#about', label: 'About' },
-  { anchor: '#contact', label: 'Contact' },
+const linkAnchors = [
+  { anchor: '#domains', key: 'domains' as const },
+  { anchor: '#work', key: 'work' as const },
+  { anchor: '#services', key: 'services' as const },
+  { anchor: '#about', key: 'about' as const },
+  { anchor: '#contact', key: 'contact' as const },
 ]
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
-  const prefix = pathname === '/' ? '' : '/'
+  const { locale, t } = useLocale()
+
+  const isHome = pathname === '/' || pathname === '/ku'
+  const homeUrl = locale === 'ku' ? '/ku' : '/'
+  const linkPrefix = isHome ? '' : homeUrl
+
+  const getOtherLocaleHref = () => {
+    if (locale === 'ku') return pathname.replace(/^\/ku/, '') || '/'
+    return '/ku' + (pathname === '/' ? '' : pathname)
+  }
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
+    const onScroll = () => setIsScrolled(window.scrollY > 10)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   return (
@@ -32,20 +43,27 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-6xl mx-auto px-6 w-full flex items-center justify-between">
-          <a href="/" className="text-xl font-semibold text-text-primary">
+          <a href={homeUrl} className="text-xl font-semibold text-text-primary">
             Ennovera
           </a>
 
           <div className="hidden md:flex items-center gap-6">
-            {links.map((link) => (
+            {linkAnchors.map((link) => (
               <a
                 key={link.anchor}
-                href={`${prefix}${link.anchor}`}
+                href={`${linkPrefix}${link.anchor}`}
                 className="text-sm text-text-muted hover:text-text-primary transition-colors duration-200"
               >
-                {link.label}
+                {t.nav[link.key]}
               </a>
             ))}
+            <Link
+              href={getOtherLocaleHref()}
+              className="text-sm text-text-muted hover:text-text-primary transition-colors border border-border-soft rounded-md px-2 py-1"
+              aria-label="Switch language"
+            >
+              {locale === 'en' ? t.language.kurdish : t.language.english}
+            </Link>
           </div>
 
           <button
@@ -68,16 +86,23 @@ export default function Navbar() {
             <X size={22} aria-hidden="true" />
           </button>
           <nav className="flex flex-col items-center gap-8">
-            {links.map((link) => (
+            {linkAnchors.map((link) => (
               <a
                 key={link.anchor}
-                href={`${prefix}${link.anchor}`}
+                href={`${linkPrefix}${link.anchor}`}
                 className="text-3xl font-semibold text-text-primary hover:text-accent-blue transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
-                {link.label}
+                {t.nav[link.key]}
               </a>
             ))}
+            <Link
+              href={getOtherLocaleHref()}
+              className="text-2xl font-semibold text-text-muted hover:text-accent-blue transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              {locale === 'en' ? t.language.kurdish : t.language.english}
+            </Link>
           </nav>
         </div>
       )}

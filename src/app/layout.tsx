@@ -13,6 +13,13 @@ export const metadata: Metadata = {
   title: 'Ennovera — Practical AI Systems',
   description:
     'Machine learning, AI agents, and automation engineered for production. Based in Kurdistan, serving the world.',
+  alternates: {
+    canonical: 'https://ennovera.com',
+    languages: {
+      en: 'https://ennovera.com',
+      ckb: 'https://ennovera.com/ku',
+    } as Record<string, string>,
+  },
   openGraph: {
     title: 'Ennovera — Practical AI Systems',
     description:
