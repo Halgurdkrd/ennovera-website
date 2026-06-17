@@ -18,12 +18,14 @@ export const metadata: Metadata = {
 
 const tagStyle: CSSProperties = {
   fontSize: '12px',
-  padding: '4px 10px',
-  backgroundColor: '#EEF2F7',
-  border: '1px solid #C8D4E0',
-  borderRadius: '6px',
-  color: '#5A6577',
+  padding: '5px 12px',
+  backgroundColor: '#F1F5F9',
+  border: '1px solid #94A3B8',
+  borderRadius: '999px',
+  color: '#475569',
   display: 'inline-block',
+  fontWeight: 500,
+  lineHeight: 1.2,
 }
 
 const stats = [
