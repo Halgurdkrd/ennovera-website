@@ -5,6 +5,7 @@ import {
   Workflow,
   TrendingUp,
   MessageSquare,
+  Newspaper,
   LucideIcon,
 } from 'lucide-react'
 import { FadeInSection } from '@/components/ui/FadeInSection'
@@ -67,10 +68,36 @@ export default function ServicesSection() {
         </FadeInSection>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+          {/* ── News Intelligence Agent — featured card ── */}
+          <FadeInSection className="sm:col-span-2 lg:col-span-2">
+            <div className="relative bg-card border border-border-soft rounded-2xl p-6 hover:-translate-y-1 hover:shadow-md transition-all duration-200 h-full">
+              <span className="absolute top-4 right-4 bg-accent-coral/10 text-accent-coral rounded-full px-2 py-0.5 text-xs font-medium tracking-wider">
+                LIVE
+              </span>
+              <div
+                className="inline-flex p-3 rounded-full mb-4 bg-accent-blue/10"
+                aria-hidden="true"
+              >
+                <Newspaper size={20} className="text-accent-blue" />
+              </div>
+              <h3 className="text-lg font-semibold text-text-primary mb-2">
+                News Intelligence Agent
+              </h3>
+              <p className="text-sm text-text-muted leading-relaxed">
+                A live AI agent that monitors the internet for any topic you choose — delivered to
+                social media, WhatsApp, or Telegram.
+              </p>
+              <p className="text-xs text-text-muted mt-2">
+                Auto-posting · Daily digests · Custom topics
+              </p>
+            </div>
+          </FadeInSection>
+
+          {/* ── Remaining 6 services ── */}
           {services.map((service, i) => {
             const Icon = service.icon
             return (
-              <FadeInSection key={service.title} delay={0.1 * i}>
+              <FadeInSection key={service.title} delay={0.1 * (i + 1)}>
                 <div className="bg-card border border-border-soft rounded-2xl p-6 hover:-translate-y-1 hover:shadow-md transition-all duration-200 h-full">
                   <div
                     className="inline-flex p-3 rounded-full mb-4 bg-accent-blue/10"
@@ -81,9 +108,7 @@ export default function ServicesSection() {
                   <h3 className="text-lg font-semibold text-text-primary mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-text-muted leading-relaxed">
-                    {service.body}
-                  </p>
+                  <p className="text-sm text-text-muted leading-relaxed">{service.body}</p>
                 </div>
               </FadeInSection>
             )
