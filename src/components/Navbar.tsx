@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Globe } from 'lucide-react'
 import { useLocale } from '@/components/LocaleProvider'
 
 const linkAnchors = [
@@ -59,10 +59,12 @@ export default function Navbar() {
             ))}
             <Link
               href={getOtherLocaleHref()}
-              className="text-sm text-text-muted hover:text-text-primary transition-colors border border-border-soft rounded-md px-2 py-1"
+              className="flex items-center gap-1.5 text-sm font-medium text-text-muted hover:text-accent-blue transition-colors px-3 py-1 rounded-md"
+              style={{ direction: 'ltr' }}
               aria-label="Switch language"
             >
-              {locale === 'en' ? t.language.kurdish : t.language.english}
+              <Globe size={16} aria-hidden="true" />
+              <span>{locale === 'en' ? t.language.kurdish : t.language.english}</span>
             </Link>
           </div>
 
@@ -86,6 +88,15 @@ export default function Navbar() {
             <X size={22} aria-hidden="true" />
           </button>
           <nav className="flex flex-col items-center gap-8">
+            <Link
+              href={getOtherLocaleHref()}
+              className="flex items-center gap-2 text-sm font-medium text-text-muted hover:text-accent-blue transition-colors px-4 py-2 rounded-full border border-border-soft"
+              style={{ direction: 'ltr' }}
+              onClick={() => setIsOpen(false)}
+            >
+              <Globe size={16} aria-hidden="true" />
+              <span>{locale === 'en' ? t.language.kurdish : t.language.english}</span>
+            </Link>
             {linkAnchors.map((link) => (
               <a
                 key={link.anchor}
@@ -96,13 +107,6 @@ export default function Navbar() {
                 {t.nav[link.key]}
               </a>
             ))}
-            <Link
-              href={getOtherLocaleHref()}
-              className="text-2xl font-semibold text-text-muted hover:text-accent-blue transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              {locale === 'en' ? t.language.kurdish : t.language.english}
-            </Link>
           </nav>
         </div>
       )}
