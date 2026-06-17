@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import type { CSSProperties } from 'react'
 import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -15,8 +16,15 @@ export const metadata: Metadata = {
   },
 }
 
-const tagClass =
-  'text-xs px-2 py-1 rounded-md border border-[#C8D4E0] text-[#5A6577] bg-[#EEF2F7]'
+const tagStyle: CSSProperties = {
+  fontSize: '12px',
+  padding: '4px 10px',
+  backgroundColor: '#EEF2F7',
+  border: '1px solid #C8D4E0',
+  borderRadius: '6px',
+  color: '#5A6577',
+  display: 'inline-block',
+}
 
 const stats = [
   { value: '2,400+', label: 'Plant Species' },
@@ -205,9 +213,9 @@ export default function HerboScanPage() {
               <h2 className="text-2xl md:text-3xl font-semibold text-text-primary mb-6">
                 Built With
               </h2>
-              <div className="flex flex-wrap gap-2">
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {techStack.map((tech) => (
-                  <span key={tech} className={tagClass}>
+                  <span key={tech} style={tagStyle}>
                     {tech}
                   </span>
                 ))}

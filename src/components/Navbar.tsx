@@ -1,19 +1,22 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 
 const links = [
-  { href: '#domains', label: 'Domains' },
-  { href: '#work', label: 'Work' },
-  { href: '#services', label: 'Services' },
-  { href: '#about', label: 'About' },
-  { href: '#contact', label: 'Contact' },
+  { anchor: '#domains', label: 'Domains' },
+  { anchor: '#work', label: 'Work' },
+  { anchor: '#services', label: 'Services' },
+  { anchor: '#about', label: 'About' },
+  { anchor: '#contact', label: 'Contact' },
 ]
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const pathname = usePathname()
+  const prefix = pathname === '/' ? '' : '/'
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20)
@@ -29,15 +32,15 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-6xl mx-auto px-6 w-full flex items-center justify-between">
-          <a href="#" className="text-xl font-semibold text-text-primary">
+          <a href="/" className="text-xl font-semibold text-text-primary">
             Ennovera
           </a>
 
           <div className="hidden md:flex items-center gap-6">
             {links.map((link) => (
               <a
-                key={link.href}
-                href={link.href}
+                key={link.anchor}
+                href={`${prefix}${link.anchor}`}
                 className="text-sm text-text-muted hover:text-text-primary transition-colors duration-200"
               >
                 {link.label}
@@ -67,8 +70,8 @@ export default function Navbar() {
           <nav className="flex flex-col items-center gap-8">
             {links.map((link) => (
               <a
-                key={link.href}
-                href={link.href}
+                key={link.anchor}
+                href={`${prefix}${link.anchor}`}
                 className="text-3xl font-semibold text-text-primary hover:text-accent-blue transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >

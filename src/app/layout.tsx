@@ -9,6 +9,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://ennovera.com'),
   title: 'Ennovera — Practical AI Systems',
   description:
     'Machine learning, AI agents, and automation engineered for production. Based in Kurdistan, serving the world.',

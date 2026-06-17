@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import type { CSSProperties } from 'react'
 
 interface WorkItem {
   slug: string
@@ -90,8 +91,34 @@ const works: WorkItem[] = [
   },
 ]
 
-const tagClass =
-  'text-xs px-2 py-1 rounded-md border border-[#C8D4E0] text-[#5A6577] bg-[#EEF2F7]'
+const tagStyle: CSSProperties = {
+  fontSize: '12px',
+  padding: '4px 10px',
+  backgroundColor: '#EEF2F7',
+  border: '1px solid #C8D4E0',
+  borderRadius: '6px',
+  color: '#5A6577',
+  display: 'inline-block',
+}
+
+const tagContainerStyle: CSSProperties = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: '8px',
+  marginTop: '12px',
+}
+
+function TechTags({ tech }: { tech: string[] }) {
+  return (
+    <div style={tagContainerStyle}>
+      {tech.map((t) => (
+        <span key={t} style={tagStyle}>
+          {t}
+        </span>
+      ))}
+    </div>
+  )
+}
 
 export default function SelectedWorkSection() {
   const [featured, ...rest] = works
@@ -118,7 +145,7 @@ export default function SelectedWorkSection() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* ── FIFA featured card — full card is clickable via onClick ── */}
+          {/* ── FIFA featured card ── */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -163,13 +190,7 @@ export default function SelectedWorkSection() {
                   {featured.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mt-4">
-                  {featured.tech.map((t) => (
-                    <span key={t} className={tagClass}>
-                      {t}
-                    </span>
-                  ))}
-                </div>
+                <TechTags tech={featured.tech} />
 
                 {featured.externalUrl && (
                   <div className="mt-6">
@@ -215,13 +236,7 @@ export default function SelectedWorkSection() {
                 <p className="text-sm text-text-muted leading-relaxed flex-1">
                   {work.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mt-4">
-                  {work.tech.map((t) => (
-                    <span key={t} className={tagClass}>
-                      {t}
-                    </span>
-                  ))}
-                </div>
+                <TechTags tech={work.tech} />
                 {work.status === 'detail' && (
                   <p className="text-xs text-accent-blue mt-3 font-medium">→ View case study</p>
                 )}

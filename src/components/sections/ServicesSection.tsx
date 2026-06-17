@@ -59,7 +59,7 @@ export default function ServicesSection() {
               // WHAT WE BUILD
             </p>
             <h2 className="text-3xl md:text-4xl font-semibold text-text-primary mb-3">
-              Six things we do well.
+              Seven things we do well.
             </h2>
             <p className="text-text-muted max-w-2xl mx-auto">
               From quick AI integrations to full custom builds. We work with teams of any size.
