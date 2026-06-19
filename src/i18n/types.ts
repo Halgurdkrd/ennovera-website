@@ -41,6 +41,7 @@ export type Translations = {
     label: string
     title: string
     subtitle: string
+    callout: string
     items: Array<{ title: string; body: string }>
   }
   work: {

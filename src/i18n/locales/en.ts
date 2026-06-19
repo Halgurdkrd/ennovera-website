@@ -85,7 +85,12 @@ export const en: Translations = {
         title: 'Regional Language AI',
         body: 'Kurdish (Sorani) and Arabic NLP, ASR, and translation systems.',
       },
+      {
+        title: 'Custom Systems',
+        body: "Don't see your industry? We build custom AI for any domain — just tell us your problem.",
+      },
     ],
+    callout: 'Looking for AI in your industry? Tell us about it — we adapt fast.',
   },
   work: {
     label: '// SELECTED WORK',
@@ -103,7 +108,7 @@ export const en: Translations = {
     drug: {
       title: 'AI Drug Discovery Pipeline',
       category: 'Pharma · NDA',
-      body: 'AI pipeline for pancreatic cancer drug discovery, combining literature mining, molecular generation, binding affinity prediction, and ADMET filtering.',
+      body: 'AI pipeline for disease modeling and drug discovery — combining literature mining, molecular generation, binding affinity prediction, and ADMET filtering. Applied to oncology and chronic conditions.',
     },
     pharma: {
       title: 'Pharmaceutical Formulation AI',
@@ -129,7 +134,7 @@ export const en: Translations = {
   services: {
     label: '// WHAT WE BUILD',
     title: 'Services we deliver, end to end.',
-    subtitle: 'From quick AI integrations to full custom builds. We work with teams of any size.',
+    subtitle: 'From quick AI integrations to full custom builds, advisory, and team training. We work with teams of any size.',
     cta: 'Start a Conversation →',
     items: [
       {
@@ -162,12 +167,16 @@ export const en: Translations = {
         title: 'AI Chatbots',
         body: 'Instagram, WhatsApp, web, and voice — multilingual conversational AI.',
       },
+      {
+        title: 'Advisory & Training',
+        body: 'AI strategy consultation, technical advisory, and team training programs — we help your organization adopt AI on your terms.',
+      },
     ],
   },
   about: {
     label: '// ABOUT ENNOVERA',
     title: 'Engineering AI from Kurdistan.',
-    p1: 'Ennovera is an AI engineering company based in the Kurdistan Region of Iraq. Founded and led by a PhD engineer specializing in communication systems and applied machine learning, we build practical AI systems for clients across industries.',
+    p1: 'Ennovera is an AI engineering studio based in the Kurdistan Region of Iraq. Founded and led by a PhD engineer specializing in communication systems and applied machine learning, we build practical AI systems for clients across industries.',
     p2: 'Our work spans pharmaceutical research, predictive analytics, conversational AI, medical imaging, and automation — with native Kurdish and Arabic language capability as a regional strength. We focus on code that runs in production, results you can measure, and engineering you can trust.',
     p3: "Whether you're a local business, an international team, or a research partner, we work with you from concept to deployment.",
   },

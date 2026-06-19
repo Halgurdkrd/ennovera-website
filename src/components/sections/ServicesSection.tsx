@@ -8,6 +8,7 @@ import {
   TrendingUp,
   MessageSquare,
   Newspaper,
+  GraduationCap,
   LucideIcon,
 } from 'lucide-react'
 import { FadeInSection } from '@/components/ui/FadeInSection'
@@ -21,6 +22,7 @@ const serviceIcons: LucideIcon[] = [
   Workflow,
   TrendingUp,
   MessageSquare,
+  GraduationCap,
 ]
 
 export default function ServicesSection() {
