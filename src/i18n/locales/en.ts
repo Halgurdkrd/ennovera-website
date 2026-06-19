@@ -52,14 +52,14 @@ export const en: Translations = {
       { display: 'PhD', numericTarget: null, suffix: '', label: 'LED ENGINEERING' },
       { display: '10+', numericTarget: 10, suffix: '+', label: 'PRODUCTION SYSTEMS SHIPPED' },
       { display: 'EN · AR · KU', numericTarget: null, suffix: '', label: 'NATIVE LANGUAGE SUPPORT' },
-      { display: '5+', numericTarget: 5, suffix: '+', label: 'INDUSTRIES SERVED' },
+      { display: '7+', numericTarget: 7, suffix: '+', label: 'INDUSTRIES SERVED' },
     ],
   },
   domains: {
     label: '// DOMAINS OF EXPERTISE',
     title: 'Cross-industry AI engineering.',
     subtitle:
-      "Six domains where we've shipped working AI — from clinical decision support to live sports prediction.",
+      "Across multiple domains where we've shipped working AI — from clinical decision support to live sports prediction.",
     items: [
       {
         title: 'Healthcare & Medical AI',
@@ -128,7 +128,7 @@ export const en: Translations = {
   },
   services: {
     label: '// WHAT WE BUILD',
-    title: 'Seven things we do well.',
+    title: 'Services we deliver, end to end.',
     subtitle: 'From quick AI integrations to full custom builds. We work with teams of any size.',
     cta: 'Start a Conversation →',
     items: [
