@@ -14,7 +14,7 @@ export const en: Translations = {
   },
   hero: {
     label: '// AI ENGINEERING STUDIO',
-    title: 'Practical AI systems for real-world problems.',
+    title: 'Practical AI systems for real‑world problems.',
     subtitle:
       'We turn AI prototypes into systems that run in production — measured, monitored, and improved.',
     cta: 'Explore Our Work →',

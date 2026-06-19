@@ -9,7 +9,7 @@ export default function HeroSection() {
   const { t } = useLocale()
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-canvas">
+    <section className="min-h-[85vh] md:min-h-screen flex items-center justify-center relative overflow-hidden bg-canvas">
       {/* Top gradient overlay */}
       <div
         className="absolute inset-0 bg-gradient-to-b from-accent-blue/[0.04] to-transparent pointer-events-none"
@@ -25,7 +25,7 @@ export default function HeroSection() {
         aria-hidden="true"
       />
 
-      <div className="max-w-6xl mx-auto px-6 py-20 text-center relative z-10">
+      <div className="max-w-6xl mx-auto px-6 pt-20 pb-10 text-center relative z-10">
         <motion.p
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -39,7 +39,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 24, scale: 0.97 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-          className="text-5xl md:text-7xl font-semibold tracking-tight text-text-primary mb-6 leading-tight"
+          className="text-5xl md:text-7xl font-semibold tracking-tight text-text-primary mb-6 leading-tight [hyphens:none]"
         >
           {t.hero.title}
         </motion.h1>

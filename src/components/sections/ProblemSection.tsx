@@ -7,7 +7,7 @@ export default function ProblemSection() {
   const { t } = useLocale()
 
   return (
-    <section id="problem" className="py-16 md:py-20 bg-canvas scroll-mt-16">
+    <section id="problem" className="pt-10 pb-16 md:pt-12 md:pb-20 bg-canvas scroll-mt-16">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <FadeInSection>
           <p className="text-xs uppercase tracking-widest text-accent-blue font-medium mb-4">
