@@ -15,6 +15,13 @@ interface WorkMeta {
   alt: string
   status: WorkStatus
   externalUrl?: string
+  lgSpan: 2 | 3 | 6
+}
+
+const lgColSpanClass: Record<2 | 3 | 6, string> = {
+  2: 'lg:col-span-2',
+  3: 'lg:col-span-3',
+  6: 'lg:col-span-6',
 }
 
 const worksMeta: WorkMeta[] = [
@@ -25,20 +32,7 @@ const worksMeta: WorkMeta[] = [
     alt: 'FIFA World Cup 2026 AI Predictor — abstract football pitch with predicted player positions and tactical network, illustrated in soft watercolor',
     status: 'live',
     externalUrl: 'https://aifootballp.com',
-  },
-  {
-    slug: 'drug-discovery',
-    tech: ['Python', 'BigQuery', 'MPNN'],
-    image: '/images/work-drug-discovery.jpg',
-    alt: 'Abstract molecular structures and DNA helix in soft watercolor — AI drug discovery pipeline visualization',
-    status: 'coming-soon',
-  },
-  {
-    slug: 'pharma-formulation',
-    tech: ['PyTorch', 'Flask', 'RAG'],
-    image: '/images/work-pharma-formulation.jpg',
-    alt: 'Soft watercolor illustration of scientific glassware and chemical analysis — pharmaceutical formulation AI',
-    status: 'coming-soon',
+    lgSpan: 6,
   },
   {
     slug: 'herboscan',
@@ -46,6 +40,7 @@ const worksMeta: WorkMeta[] = [
     image: '/images/work-herboscan.jpg',
     alt: 'Botanical specimens with magnifying lens in soft watercolor — HerboScan plant identification AI',
     status: 'detail',
+    lgSpan: 3,
   },
   {
     slug: 'neuraldx',
@@ -53,6 +48,23 @@ const worksMeta: WorkMeta[] = [
     image: '/images/work-neuraldx.jpg',
     alt: 'Abstract cross-sectional medical scans with diagnostic regions — NeuralDx medical imaging AI',
     status: 'detail',
+    lgSpan: 3,
+  },
+  {
+    slug: 'drug-discovery',
+    tech: ['Python', 'BigQuery', 'MPNN'],
+    image: '/images/work-drug-discovery.jpg',
+    alt: 'Abstract molecular structures and DNA helix in soft watercolor — AI drug discovery pipeline visualization',
+    status: 'coming-soon',
+    lgSpan: 2,
+  },
+  {
+    slug: 'pharma-formulation',
+    tech: ['PyTorch', 'Flask', 'RAG'],
+    image: '/images/work-pharma-formulation.jpg',
+    alt: 'Soft watercolor illustration of scientific glassware and chemical analysis — pharmaceutical formulation AI',
+    status: 'coming-soon',
+    lgSpan: 2,
   },
   {
     slug: 'retail-chatbot',
@@ -60,6 +72,7 @@ const worksMeta: WorkMeta[] = [
     image: '/images/work-chatbot.jpg',
     alt: 'Soft watercolor speech bubbles around a smartphone — retail conversational AI',
     status: 'coming-soon',
+    lgSpan: 2,
   },
 ]
 
@@ -106,12 +119,6 @@ export default function SelectedWorkSection() {
       liveStat: t.work.fifa.live,
       linkLabel: t.work.fifa.cta,
     },
-    { title: t.work.drug.title, category: t.work.drug.category, description: t.work.drug.body },
-    {
-      title: t.work.pharma.title,
-      category: t.work.pharma.category,
-      description: t.work.pharma.body,
-    },
     {
       title: t.work.herboscan.title,
       category: t.work.herboscan.category,
@@ -121,6 +128,12 @@ export default function SelectedWorkSection() {
       title: t.work.neuraldx.title,
       category: t.work.neuraldx.category,
       description: t.work.neuraldx.body,
+    },
+    { title: t.work.drug.title, category: t.work.drug.category, description: t.work.drug.body },
+    {
+      title: t.work.pharma.title,
+      category: t.work.pharma.category,
+      description: t.work.pharma.body,
     },
     {
       title: t.work.retail.title,
@@ -151,14 +164,14 @@ export default function SelectedWorkSection() {
           <p className="text-text-muted max-w-2xl mx-auto">{t.work.subtitle}</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* ── FIFA featured card ── */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
+          {/* ── FIFA — full-width hero card ── */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="md:col-span-2 lg:col-span-2 bg-card border border-border-soft rounded-2xl overflow-hidden group cursor-pointer"
+            className="lg:col-span-6 md:col-span-2 bg-card border border-border-soft rounded-2xl overflow-hidden group cursor-pointer"
             onClick={() => window.open(featured.externalUrl, '_blank', 'noopener,noreferrer')}
           >
             <div className="flex flex-col lg:flex-row">
@@ -174,7 +187,6 @@ export default function SelectedWorkSection() {
 
               {/* Right: content */}
               <div className="lg:w-[45%] p-6 md:p-8 flex flex-col">
-                {/* Live stat pill */}
                 <div className="flex items-center gap-2 bg-accent-coral/10 text-accent-coral rounded-full px-3 py-1 w-fit mb-4 text-xs font-medium">
                   <motion.div
                     animate={{ opacity: [0.4, 1, 0.4] }}
@@ -221,8 +233,10 @@ export default function SelectedWorkSection() {
             </div>
           </motion.div>
 
-          {/* ── Regular work cards ── */}
+          {/* ── Bento cards: HerboScan (3) + NeuralDx (3) + Drug (2) + Pharma (2) + Retail (2) ── */}
           {rest.map((work, i) => {
+            const isSmall = work.lgSpan === 2
+
             const inner = (
               <>
                 <Image
@@ -235,7 +249,11 @@ export default function SelectedWorkSection() {
                 <span className="inline-block border border-border-soft rounded-full px-3 py-1 text-xs text-text-muted mb-3 w-fit">
                   {work.category}
                 </span>
-                <h3 className="text-xl font-semibold text-text-primary mb-2">{work.title}</h3>
+                <h3
+                  className={`${isSmall ? 'text-lg' : 'text-xl'} font-semibold text-text-primary mb-2`}
+                >
+                  {work.title}
+                </h3>
                 <p className="text-sm text-text-muted leading-relaxed flex-1">{work.description}</p>
                 <TechTags tech={work.tech} />
                 {work.status === 'detail' && (
@@ -254,6 +272,7 @@ export default function SelectedWorkSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.6, delay: 0.1 * (i + 1), ease: 'easeOut' }}
+                className={lgColSpanClass[work.lgSpan]}
               >
                 {work.status === 'detail' ? (
                   <Link

@@ -3,6 +3,7 @@
 import { GraduationCap, Rocket, Languages, LucideIcon } from 'lucide-react'
 import { FadeInSection } from '@/components/ui/FadeInSection'
 import { useLocale } from '@/components/LocaleProvider'
+import { ParticleField } from '@/components/ui/ParticleField'
 
 const pillarsMeta: Array<{ icon: LucideIcon; iconColor: string; statColor: string }> = [
   { icon: GraduationCap, iconColor: '#7C9EE8', statColor: '#7C9EE8' },
@@ -18,6 +19,9 @@ export default function PillarsSection() {
       id="pillars"
       className="py-20 md:py-28 bg-[#0F1729] scroll-mt-16 relative overflow-hidden"
     >
+      {/* Particle drift background */}
+      <ParticleField count={35} color="#7C9EE8" />
+
       {/* Radial glow top-right */}
       <div
         className="absolute top-0 right-0 w-[600px] h-[600px] pointer-events-none"
@@ -46,7 +50,7 @@ export default function PillarsSection() {
             const { icon: Icon, iconColor, statColor } = pillarsMeta[i]
             return (
               <FadeInSection key={pillar.title} delay={0.1 * i}>
-                <div className="bg-white/[0.03] rounded-2xl border border-white/10 p-6 md:p-8 hover:bg-white/[0.06] hover:border-white/20 hover:scale-[1.02] transition-all duration-300 h-full">
+                <div className="bg-white/[0.04] backdrop-blur-md border border-white/15 rounded-2xl p-6 md:p-8 shadow-lg shadow-black/20 hover:bg-white/[0.07] hover:border-white/25 hover:backdrop-blur-lg hover:scale-[1.02] transition-all duration-300 h-full">
                   <div className="mb-4" aria-hidden="true">
                     <Icon size={24} style={{ color: iconColor }} />
                   </div>

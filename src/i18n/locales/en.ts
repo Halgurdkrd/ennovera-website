@@ -16,7 +16,7 @@ export const en: Translations = {
     label: '// AI ENGINEERING STUDIO',
     title: 'Practical AI systems for real-world problems.',
     subtitle:
-      'Machine learning, AI agents, and automation — designed, built, and deployed by engineers who ship.',
+      'We turn AI prototypes into systems that run in production — measured, monitored, and improved.',
     cta: 'Explore Our Work →',
   },
   problem: {

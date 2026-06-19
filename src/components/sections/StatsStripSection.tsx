@@ -51,13 +51,25 @@ export default function StatsStripSection() {
               viewport={{ once: true, margin: '-80px' }}
               transition={{ duration: 0.6, delay: 0.1 * i, ease: 'easeOut' }}
             >
-              <div className="text-5xl md:text-6xl font-bold text-accent-blue mb-2">
+              <motion.div
+                className="text-5xl md:text-6xl font-bold text-accent-blue mb-2"
+                initial={{ textShadow: '0 0 0 transparent' }}
+                whileInView={{
+                  textShadow: [
+                    '0 0 0 transparent',
+                    '0 0 20px rgba(59, 91, 219, 0.6)',
+                    '0 0 0 transparent',
+                  ],
+                }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 1.5, delay: 0.1 * i + 1.2, ease: 'easeOut' }}
+              >
                 {stat.numericTarget !== null ? (
                   <Counter target={stat.numericTarget} suffix={stat.suffix} />
                 ) : (
                   stat.display
                 )}
-              </div>
+              </motion.div>
               <p className="text-sm uppercase tracking-widest text-text-muted">{stat.label}</p>
             </motion.div>
           ))}
